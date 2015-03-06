@@ -6,8 +6,14 @@ I have been using Swagger to document API in Spring project and it worked pretty
 
 The Swagger-UI is successfully launched for the initial commit by http://localhost:8080/sdoc.jsp, unfortunately retrieval of API docs have some errors (Can't read swagger JSON from http://localhost:8080/api-docs). For now, I am switching to [JSONDoc](http://jsondoc.org/) simply because it works well with Spring boot. 
 
+### How to run
+```
+1. mvn spring-boot:run
+2. open http://localhost:8080/sdoc.jsp
+
+```
 
 ### NOTE
-It only works with Tomcat. No luck for Jetty so far.
+It only works with Tomcat. If we switch to Jetty, the Swagger-UI is not loaded.
 
 

@@ -12,7 +12,7 @@ I have been using Swagger to document API in Spring project and it worked pretty
 
 ```
 
-![User Document](/images/swagger-ui.png?raw=true "Optional Title")
+![User Document](src/images/swagger-ui.png?raw=true "Swagger")
 
 ### NOTE
 It only works with Tomcat. If we switch to Jetty, the Swagger-UI is not loaded.

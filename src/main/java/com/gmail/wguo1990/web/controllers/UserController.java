@@ -17,7 +17,7 @@ import com.wordnik.swagger.annotations.Api;
 import com.wordnik.swagger.annotations.ApiOperation;
 
 
-@Api(basePath = "/users/", value = "user resource managmenet")
+@Api(value = "users")
 @RestController
 @RequestMapping("/users/")
 public class UserController {
@@ -33,6 +33,7 @@ public class UserController {
 		return userService.create(user);
 	}
 	
+	@ApiOperation(value = "update an existing user")
 	@ResponseStatus(HttpStatus.OK)
 	@RequestMapping(value = "/users/{userId}", method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE)
 	public void update(@PathVariable(value = "userId") String userId, @RequestBody User user){

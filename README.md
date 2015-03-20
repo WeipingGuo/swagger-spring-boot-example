@@ -17,4 +17,15 @@ I have been using Swagger to document API in Spring project and it worked pretty
 ### NOTE
 It only works with Tomcat. If we switch to Jetty, the Swagger-UI is not loaded.
 
+### To make it work with Jetty
+It seems that I could not use swagger-ui as jar directly. To make it work with Jetty, I have to go for static contents.
+
+```
+1. Remove swagger-spring-mvc-ui from pom.xml
+2. Download [swagger-ui-git-hut](https://github.com/swagger-api/swagger-ui.git)
+3. Copy the 'dist' directory to folders under resources (I placed under src/main/resources/public)
+4. Edit index.html,  url = "http://petstore.swagger.io/v2/swagger.json"; ===> url = "http://localhost:8080/api-docs"
+5. mvn spring-boot:run
+6. open: http://localhost:8080/index.html
+```
 

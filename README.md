@@ -18,7 +18,7 @@ I have been using Swagger to document API in Spring project and it worked pretty
 It only works with Tomcat. If we switch to Jetty, the Swagger-UI is not loaded.
 
 ### To make it work with Jetty
-It seems that I could not use swagger-ui as jar directly. To make it work with Jetty, I have to go for static contents.
+Due to [Spring Boot limitation on JSP for embedded container](http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-web-applications.html), swagger-ui cannot be used as jar directly. To make it work with Jetty, I have to go for static contents.
 
 ```
 1. Remove swagger-spring-mvc-ui from pom.xml
@@ -29,4 +29,3 @@ It seems that I could not use swagger-ui as jar directly. To make it work with J
 5. mvn spring-boot:run
 6. open: http://localhost:8080/index.html
 ```
-
